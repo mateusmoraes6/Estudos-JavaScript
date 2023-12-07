@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste</title>
+</head>
+<body>
+    <h1>Teste de  nacionalidade</h1>
+    Me diz sua nacionalidade e vou dizer se é estramgeiro: <input type="text" name="txtn" class="test">
+    <input type="button" value="verificar" onclick="deduzir()">
+    <div class="res">
+
+    </div>
+    <script>
+        function deduzir() {
+            var txtn2 = window.document.querySelector('input.test')
+            var res = window.document.querySelector('div.res')
+            var nac = String(txtn2.value)
+            res.innerHTML = `<p>Então sua nacionalidade é <strong>${nac}</strong></p>`
+            if (nac != 'brasileiro') {
+                res.innerHTML += 'Oh, Você me parece estrangeiro'
+            } else {
+            res.innerHTML += `<p>Você não me parece estrangeiro, é um ${nac}</p>`
+            }
+        }
+    </script>
+</body>
+</html>

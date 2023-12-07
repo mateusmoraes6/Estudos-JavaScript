@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        body {
+            background: darkgray;
+            font: normal 18px Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Estudos em DOM</h1>
+    <p>Aqui vai a prática para ver o resultado</p>
+    <p>Praticando o <strong>DOM</strong> em JS</p>
+    <div class="msg">Clica em mim bb</div>
+    <script>
+        // modo de selecionar o elemento pela maraca, e ao acrescentar [] acessa o p
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[0]
+        // window.document.write('Vem com o bruxo ' + p1.innerText) // innerText = pega o text do p selecionado mas sem formatação
+        // corpo.style.background = 'violet'
+        // p1.style.color = 'blue'
+
+        // var p1 = window.document.getElementsByTagName('p')[1]
+        // document.write('vem ' + p1.innerHTML) // pega o text formato
+
+        // var porId = window.document.getElementById('msg')
+        // porId.style.background = 'gray'
+        // porId.style.color = 'white'
+        // porId.innerText = 'Estou em testes papi...'
+
+        // para uma modificação mais dinamica
+        var d = window.document.querySelector('div.msg')
+        d.style.background = 'blue'
+
+    </script>
+</body>
+</html>
